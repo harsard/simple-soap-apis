@@ -46,7 +46,7 @@ public class CourseDetailsEndPoint {
 
 	@PayloadRoot(namespace = "http://soap.rca/classc/courses", localPart = "GetAllCourseDetailsRequest")
 	@ResponsePayload
-	public GetAllCourseDetailsResponse findAll(@RequestPayload GetAllCourseDetailsRequest request) {
+	public GetAllCourseDetailsResponse findAll() {
 
 		GetAllCourseDetailsResponse allCourseDetailsResponse = new GetAllCourseDetailsResponse();
 		List<Course> courses = courseRepository.findAll();
